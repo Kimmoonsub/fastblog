@@ -1,6 +1,7 @@
 from django.db import models
 from django.contrib.auth.models import AbstractUser, BaseUserManager
 
+# 아래 내용은 상수라서 클래스에 넣기 보다는 밖에 독립적으로 빼놓음
 GENDER_CHOICES = (
     (0, 'Male'),
     (1, 'Female'),
@@ -42,7 +43,8 @@ class User(AbstractUser):
     email = models.EmailField(verbose_name='email', max_length=255, unique=True)
 
     username = models.CharField(max_length=30)
-    gender = models.SmallIntegerField(choices=GENDER_CHOICES)
+    gender = models.SmallIntegerField(choices=GENDER_CHOICES) #위에 숫자로 성별고르라고 해서 smallintegerfield 사용
+
 
     objects = UserManager()
     USERNAME_FIELD = 'email'

@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
 ]
 
+# 이렇게 하는 이유는 내가 만든 앱이 뭔지 확실히 보기 위해서 임
 INSTALLED_APPS += [
     'blogs',
     'django_social_share',
