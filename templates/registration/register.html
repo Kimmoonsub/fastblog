@@ -9,6 +9,7 @@
     <hr>
     <form action="" method="POST">
       {{ user_form.as_p }} form.as_table form.as_ul
+      <!-- _p, _talble, _ul 태그 형태를 말함 -->
       {% csrf_token %}
       <input class="btn btn-primary" type="submit" value="submit">
     </form>
